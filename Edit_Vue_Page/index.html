@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Granny Blog</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./style.css">
+  </head>
+
+  <body>
+      <div id="app">
+
+
+      <div class="container">
+
+        <div class="row">
+       
+          <div class="col-10 col-md-10 mx-auto paper">
+          
+            <div v-if="post" class="content">
+             <editable-title  class="titleStyle" :content="title" v-model="title" @update="text = $event"></editable-title>
+              <editable-content class="contentStyle" :content="content" @update="text = $event" v-model="content"></editable-content>
+             
+                </div>
+    
+          </div>
+         <a><button @click="savePaper"  onClick="closeNav()" class="btn btn-info btn-block" id="publishBtn">Publish</button></a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- development version, includes helpful console warnings 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- production version, optimized for size and speed 
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <script src="./app.js"></script>
+    <script>
+
+</script>
+  </body>
+</html>
